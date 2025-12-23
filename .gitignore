@@ -1,6 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# ==================== #
+# DEPENDENCIES         #
+# ==================== #
 /node_modules
 /.pnp
 .pnp.*
@@ -9,33 +11,277 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.pnpm-store/
 
-# testing
-/coverage
-
-# next.js
+# ==================== #
+# BUILD & OUTPUT       #
+# ==================== #
 /.next/
 /out/
+/build/
+/dist/
+.next/
+.next/*
+!.next/cache/
+.next/cache/*
+!.next/cache/images/
 
-# production
-/build
+# ==================== #
+# TESTING & COVERAGE   #
+# ==================== #
+/coverage
+*.lcov
+.nyc_output
+/.jest/
+/.vitest/
 
-# misc
+# ==================== #
+# ENVIRONMENT          #
+# ==================== #
+.env*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# ==================== #
+# IDE & EDITOR         #
+# ==================== #
 .DS_Store
-*.pem
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
+.sublime-*
+.project
+.classpath
+.settings/
 
-# debug
+# ==================== #
+# OPERATING SYSTEM     #
+# ==================== #
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# ==================== #
+# LOGS                 #
+# ==================== #
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+logs/
 
-# env files (can opt-in for committing if needed)
-.env*
+# ==================== #
+# RUNTIME              #
+# ==================== #
+*.pid
+*.seed
+*.pid.lock
 
-# vercel
-.vercel
+# ==================== #
+# TYPEORM              #
+# ==================== #
+ormconfig.json
 
-# typescript
-*.tsbuildinfo
+# ==================== #
+# DOCKER               #
+# ==================== #
+docker-compose.override.yml
+
+# ==================== #
+# MISC                 #
+# ==================== #
+*.pem
+*.der
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.cer
+*.sst
+*.stl
+*.p7b
+
+# ==================== #
+# NEXT.JS SPECIFIC     #
+# ==================== #
+.next-env.d.ts
 next-env.d.ts
+*.tsbuildinfo
+
+# ==================== #
+# TYPESCRIPT           #
+# ==================== #
+*.tsbuildinfo
+
+# ==================== #
+# VERCEL               #
+# ==================== #
+.vercel
+.vercel/
+
+# ==================== #
+# SUPABASE             #
+# ==================== #
+.supabase/
+
+# ==================== #
+# TAILWIND CSS         #
+# ==================== #
+.tailwindcss
+
+# ==================== #
+# PERFORMANCE          #
+# ==================== #
+*.cpuprofile
+*.heapsnapshot
+
+# ==================== #
+# SECURITY             #
+# ==================== #
+secrets.yml
+secrets.yaml
+secrets.json
+*.secret
+*.key
+*.pem
+*.crt
+
+# ==================== #
+# TEMPORARY FILES      #
+# ==================== #
+*.tmp
+*.temp
+.temp/
+tmp/
+temp/
+
+# ==================== #
+# PACKAGE MANAGERS     #
+# ==================== #
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+.shrinkwrap.json
+
+# ==================== #
+# MACOS                #
+# ==================== #
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+__MACOSX/
+
+# ==================== #
+# WINDOWS              #
+# ==================== #
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# ==================== #
+# LINUX                #
+# ==================== #
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==================== #
+# VISUAL STUDIO CODE   #
+# ==================== #
+.history
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# ==================== #
+# JETBRAINS IDEs       #
+# ==================== #
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# ==================== #
+# ATOM                 #
+# ==================== #
+.atom/
+.atom.cson
+.atom.cs
+.atomic_design
+
+# ==================== #
+# SUBLIME TEXT         #
+# ==================== #
+*.sublime-workspace
+*.sublime-project
+sublime-text-*
+
+# ==================== #
+# MISCELLANEOUS        #
+# ==================== #
+*.sass-cache/
+*.css.map
+*.js.map
+*.sourcemap
+.hyper.js
+.hyper.json
+.tern-port
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.turbo/
+.awcache/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.node_repl_history
+
+# ==================== #
+# DOCKER & KUBERNETES  #
+# ==================== #
+.docker/
+.kubernetes/
+.kube/
+*.dockerignore
+*.kubeconfig
+
+# ==================== #
+# CI/CD                #
+# ==================== #
+.circleci/
+.travis.yml
+.gitlab-ci.yml
+.github/
+!.github/workflows/
+.github/workflows/*
+!.github/workflows/ci.yml
+!.github/workflows/cd.yml
+.codesandbox/
